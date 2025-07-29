@@ -7,7 +7,9 @@
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types",
-    "dev-csr": "turbo run dev --filter=web-csr"
+    "dev-all": "turbo run dev --parallel",
+    "dev-csr": "turbo run dev --filter=web-csr",
+    "dev-functions": "turbo run dev --filter=functions"
   },
   "devDependencies": {
     "prettier": "^3.6.2",
