@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import IconError from '../icons/IconError.vue'
-import { splitByNewline } from '@/utils/format-util'
+import { splitByNewline } from '@imdaesomun/shared/utils/format-util'
 
 const props = defineProps<{
   content?: string

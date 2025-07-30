@@ -2,10 +2,10 @@
 import IconDate from '@/components/icons/IconDate.vue'
 import IconView from '@/components/icons/IconView.vue'
 import IconDepartment from '@/components/icons/IconDepartment.vue'
-import { formatDate, formatNumberWithComma } from '@/utils/format-util'
-import { isNewNotice } from '@/helpers/notice-helper'
+import { formatDate, formatNumberWithComma } from '@imdaesomun/shared/utils/format-util'
+import { isNewNotice } from '@imdaesomun/shared/helpers/notice-helper'
 import { RouterLink } from 'vue-router'
-import { AppRoute } from '@/constants/app-route'
+import { AppRoute } from '@imdaesomun/shared/constants/app-route'
 
 const props = defineProps<{
   id: string

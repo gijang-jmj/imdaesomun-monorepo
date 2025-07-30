@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, useRoute } from 'vue-router'
-import { AppRoute } from '@/constants/app-route'
+import { AppRoute } from '@imdaesomun/shared/constants/app-route'
 import IconHomeFill from '@/components/icons/IconHomeFill.vue'
 import AppAvatar from '@/components/ui/AppAvatar.vue'
 import { useUserStore } from '@/stores/user-store'

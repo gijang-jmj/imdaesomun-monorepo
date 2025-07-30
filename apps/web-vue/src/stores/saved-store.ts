@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 import { getSavedNotices } from '@/api/notice-api'
-import type { Notice } from '@/types/notice'
+import type { Notice } from '@imdaesomun/shared/types/notice'
 import { useUserStore } from '@/stores/user-store'
 
 export const useSavedStore = defineStore('saved', () => {

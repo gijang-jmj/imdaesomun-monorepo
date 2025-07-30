@@ -1,7 +1,7 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
 import { getBmcNoticeList, getGhNoticeList, getIhNotice, getShNoticeList } from '@/api/notice-api'
-import type { Notice } from '@/types/notice'
+import type { Notice } from '@imdaesomun/shared/types/notice'
 
 const createNoticeStore = (id: string, fetcher: () => Promise<Notice[]>) => {
   return defineStore(id, () => {

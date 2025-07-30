@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import IconDate from '@/components/icons/IconDate.vue'
 import IconDepartment from '@/components/icons/IconDepartment.vue'
-import { formatDate } from '@/utils/format-util'
+import { formatDate } from '@imdaesomun/shared/utils/format-util'
 import { RouterLink } from 'vue-router'
-import { AppRoute } from '@/constants/app-route'
-import { getNoticeCorporationBgColor, getNoticeCorporationTypeKor } from '@/helpers/notice-helper'
+import { AppRoute } from '@imdaesomun/shared/constants/app-route'
+import { getNoticeCorporationBgColor, getNoticeCorporationTypeKor } from '@imdaesomun/shared/helpers/notice-helper'
 import { computed } from 'vue'
 
 const props = defineProps<{

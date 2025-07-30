@@ -8,7 +8,7 @@ import {
   signOut,
   onAuthStateChanged,
 } from 'firebase/auth'
-import { checkInAppBrowser } from '@/utils/link-util'
+import { checkInAppBrowser } from '@imdaesomun/shared/utils/link-util'
 
 export const useUserStore = defineStore('user', () => {
   const user = ref(auth.currentUser)

@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { AppRoute } from '@/constants/app-route'
+import { AppRoute } from '@imdaesomun/shared/constants/app-route'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

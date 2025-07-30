@@ -1,4 +1,4 @@
-import { format } from "date-fns"
+import { format } from "packages/shared/node_modules/date-fns/format"
 
 export const formatDate = (timestamp: number): string => {
   return format(new Date(timestamp), 'yyyy.MM.dd')

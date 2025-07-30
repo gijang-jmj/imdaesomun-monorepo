@@ -16,7 +16,7 @@ import {
 import NoticeCardSkeleton from './components/NoticeCardSkeleton.vue'
 import InfoCard from '@/components/shared/InfoCard.vue'
 import ErrorCard from '@/components/shared/ErrorCard.vue'
-import { NoticeCorporationTypeKor } from '@/constants/notice'
+import { NoticeCorporationTypeKor } from '@imdaesomun/shared/constants/notice'
 
 const shNoticeListStore = useShNoticeListStore()
 const {

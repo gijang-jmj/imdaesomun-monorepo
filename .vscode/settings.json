@@ -6,5 +6,6 @@
   ],
   "cSpell.words": [
     "imdaesomun"
-  ]
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

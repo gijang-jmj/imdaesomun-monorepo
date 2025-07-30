@@ -1,5 +1,5 @@
 import axiosInstance from '@/services/axios'
-import type { Notice, NoticePagination } from '@/types/notice'
+import type { Notice, NoticePagination } from '@imdaesomun/shared/types/notice'
 
 export const getShNoticeList = async (): Promise<Notice[]> => {
   const response = await axiosInstance.get<Notice[]>('/getShNotices')

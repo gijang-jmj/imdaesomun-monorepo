@@ -1,5 +1,5 @@
 import { ref } from 'vue'
-import type { Notice } from '@/types/notice'
+import type { Notice } from '@imdaesomun/shared/types/notice'
 import { getNoticeById, saveNotice, deleteNotice, getNoticeSaved } from '@/api/notice-api'
 import {
   useShNoticeListStore,
