@@ -1,5 +1,5 @@
 import { NoticeCorporationTypeKor } from "@imdaesomun/shared/constants/notice"
-import { isToday } from "packages/shared/node_modules/date-fns/isToday"
+import { isToday } from "date-fns"
 
 export const isNewNotice = (timestamp: number): boolean => {
   return isToday(new Date(timestamp))

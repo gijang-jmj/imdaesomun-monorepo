@@ -13,8 +13,8 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@imdaesomun/shared": "workspace:*",
     "axios": "^1.10.0",
-    "date-fns": "^4.1.0",
     "firebase": "^11.10.0",
     "lottie-web": "^5.13.0",
     "pinia": "^3.0.3",

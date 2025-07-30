@@ -2,8 +2,6 @@
   "exclude": ["node_modules", "dist"],
   "compilerOptions": {
     // basic
-    "target": "ESNext",
-    "module": "ESNext",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "strict": true,
     "skipLibCheck": true,
@@ -12,9 +10,11 @@
     // alias
     "baseUrl": ".",
     "paths": {
+      // vue
+      "@/*": ["apps/web-vue/src/*"],
+      // packages
       "@imdaesomun/assets/*": ["packages/assets/src/*"],
       "@imdaesomun/shared/*": ["packages/shared/src/*"],
-      "@/*": ["apps/web-vue/src/*"]
     },
   },
 }

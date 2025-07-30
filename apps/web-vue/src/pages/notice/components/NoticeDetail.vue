@@ -4,12 +4,12 @@ import type { Notice } from '@imdaesomun/shared/types/notice'
 import IconDate from '@/components/icons/IconDate.vue'
 import IconDepartment from '@/components/icons/IconDepartment.vue'
 import IconView from '@/components/icons/IconView.vue'
-import { getNoticeCorporationTypeKor } from '@imdaesomun/shared/helpers/notice-helper'
 import { formatDate, formatNumberWithComma, splitByNewline } from '@imdaesomun/shared/utils/format-util'
 import IconLink from '@/components/icons/IconLink.vue'
 import IconBookmark from '@/components/icons/IconBookmark.vue'
 import { postToUrl } from '@imdaesomun/shared/utils/link-util'
 import IconBookmarkCheck from '@/components/icons/IconBookmarkCheck.vue'
+import { getNoticeCorporationTypeKor } from '@imdaesomun/shared/helpers/notice-helper'
 
 const props = defineProps<{
   notice: Notice

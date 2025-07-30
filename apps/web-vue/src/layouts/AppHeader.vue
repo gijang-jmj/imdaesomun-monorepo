@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { RouterLink, useRoute } from 'vue-router'
-import { AppRoute } from '@imdaesomun/shared/constants/app-route'
 import IconHomeFill from '@/components/icons/IconHomeFill.vue'
 import AppAvatar from '@/components/ui/AppAvatar.vue'
 import { useUserStore } from '@/stores/user-store'
 import ProfileModal from '@/components/shared/ProfileModal.vue'
 import { useModal } from '@/composables/useModal'
 import LoginModal from '@/components/shared/LoginModal.vue'
+import { AppRoute } from '@imdaesomun/shared/constants/app-route'
 
 const route = useRoute()
 const user = useUserStore()

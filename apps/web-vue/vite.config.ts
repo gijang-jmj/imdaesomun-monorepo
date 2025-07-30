@@ -14,6 +14,8 @@ export default defineConfig(() => {
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url)),
+        '@imdaesomun/assets': fileURLToPath(new URL('../../packages/assets/src', import.meta.url)),
+        '@imdaesomun/shared': fileURLToPath(new URL('../../packages/shared/src', import.meta.url)),
       },
     },
     server: {

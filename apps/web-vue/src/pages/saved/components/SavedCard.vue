@@ -4,8 +4,8 @@ import IconDepartment from '@/components/icons/IconDepartment.vue'
 import { formatDate } from '@imdaesomun/shared/utils/format-util'
 import { RouterLink } from 'vue-router'
 import { AppRoute } from '@imdaesomun/shared/constants/app-route'
-import { getNoticeCorporationBgColor, getNoticeCorporationTypeKor } from '@imdaesomun/shared/helpers/notice-helper'
 import { computed } from 'vue'
+import { getNoticeCorporationBgColor, getNoticeCorporationTypeKor } from '@imdaesomun/shared/helpers/notice-helper'
 
 const props = defineProps<{
   id: string
