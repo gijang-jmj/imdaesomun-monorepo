@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "baseUrl": ".",
+    "paths": {
+      "@imdaesomun/assets/*": ["packages/assets/src/*"],
+      "@imdaesomun/shared/*": ["packages/shared/src/*"],
+    },
+    "composite": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}

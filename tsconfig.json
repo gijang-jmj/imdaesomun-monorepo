@@ -1,11 +1,7 @@
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@imdaesomun/*": ["packages/*"],
-    },
-    "noEmit": true,
-    "strict": true,
-  },
-  "exclude": ["node_modules", "dist"]
+  "files": [],
+  "references": [
+    { "path": "./packages/assets" },
+    { "path": "./packages/shared" },
+  ]
 }
