@@ -1,0 +1,11 @@
+{
+  "name": "@imdaesomun/helpers",
+  "version": "1.0.0",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "license": "MIT",
+  "dependencies": {
+    "date-fns": "^3.0.0",
+    "@imdaesomun/constants": "workspace:*"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@imdaesomun/*": ["packages/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}
