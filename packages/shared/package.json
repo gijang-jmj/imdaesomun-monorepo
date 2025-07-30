@@ -1,0 +1,8 @@
+{
+  "name": "@imdaesomun/shared",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "date-fns": "^4.1.0"
+  }
+}

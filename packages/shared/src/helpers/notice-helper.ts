@@ -1,5 +1,5 @@
-import { NoticeCorporationTypeKor } from '@/constants/notice'
-import { isToday } from 'date-fns'
+import { isToday } from "date-fns"
+import { NoticeCorporationTypeKor } from "../constants/notice"
 
 export const isNewNotice = (timestamp: number): boolean => {
   return isToday(new Date(timestamp))
