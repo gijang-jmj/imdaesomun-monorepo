@@ -64,6 +64,9 @@ importers:
 
   apps/web-vue:
     dependencies:
+      '@imdaesomun/assets':
+        specifier: workspace:*
+        version: link:../../packages/assets
       '@imdaesomun/shared':
         specifier: workspace:*
         version: link:../../packages/shared

@@ -3,5 +3,5 @@
 </template>
 
 <script setup lang="ts">
-import DateSvg from '@/assets/icons/date.svg'
+import DateSvg from '@imdaesomun/assets/icons/date.svg'
 </script>

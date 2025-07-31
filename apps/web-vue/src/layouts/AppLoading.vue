@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
 import { Vue3Lottie } from 'vue3-lottie'
-import animationData from '@/assets/lottie/loading.json'
+import animationData from '@imdaesomun/assets/lottie/loading.json'
 import { useLoading } from '@/composables/useLoading'
 
 const { isLoading } = useLoading()

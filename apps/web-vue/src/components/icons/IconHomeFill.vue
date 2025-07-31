@@ -3,5 +3,5 @@
 </template>
 
 <script setup lang="ts">
-import HomeFillSvg from '@/assets/icons/home_fill.svg'
+import HomeFillSvg from '@imdaesomun/assets/icons/home_fill.svg'
 </script>

@@ -3,5 +3,5 @@
 </template>
 
 <script setup lang="ts">
-import DepartmentSvg from '@/assets/icons/department.svg'
+import DepartmentSvg from '@imdaesomun/assets/icons/department.svg'
 </script>

@@ -3,5 +3,5 @@
 </template>
 
 <script setup lang="ts">
-import ViewSvg from '@/assets/icons/view.svg'
+import ViewSvg from '@imdaesomun/assets/icons/view.svg'
 </script>

@@ -1,5 +1,3 @@
-@import 'tailwindcss';
-
 @theme {
   /** Gray */
   --color-gray-50: #f9fafb;
@@ -144,13 +142,4 @@
   font-size: 0.75rem; /* 12px */
   line-height: 1rem; /* 16px */
   letter-spacing: -0.03em;
-}
-
-#app {
-  @apply bg-gray-50 text-gray-900;
-}
-
-.no-scroll {
-  overflow: hidden;
-  touch-action: none;
 }

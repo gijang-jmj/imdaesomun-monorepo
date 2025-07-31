@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+@import '../node_modules/@imdaesomun/assets/src/styles/tailwind.base.css';
+@source "../node_modules/@imdaesomun";
+
+#app {
+  @apply bg-gray-50 text-gray-900;
+}
+
+.no-scroll {
+  overflow: hidden;
+  touch-action: none;
+}

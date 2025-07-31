@@ -3,5 +3,5 @@
 </template>
 
 <script setup lang="ts">
-import OrderSvg from '@/assets/icons/order.svg'
+import OrderSvg from '@imdaesomun/assets/icons/order.svg'
 </script>

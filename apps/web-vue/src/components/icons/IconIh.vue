@@ -3,5 +3,5 @@
 </template>
 
 <script setup lang="ts">
-import IhPng from '@/assets/icons/ih.png'
+import IhPng from '@imdaesomun/assets/icons/ih.png'
 </script>

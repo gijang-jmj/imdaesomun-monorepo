@@ -3,5 +3,5 @@
 </template>
 
 <script setup lang="ts">
-import MailSvg from '@/assets/icons/mail.svg'
+import MailSvg from '@imdaesomun/assets/icons/mail.svg'
 </script>
