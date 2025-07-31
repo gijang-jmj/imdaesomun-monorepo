@@ -14,7 +14,8 @@
       "@/*": ["apps/web-vue/src/*"],
       // packages
       "@imdaesomun/assets/*": ["packages/assets/src/*"],
-      "@imdaesomun/shared/*": ["packages/shared/src/*"],
-    },
-  },
+      "@imdaesomun/configs/*": ["packages/configs/*"],
+      "@imdaesomun/shared/*": ["packages/shared/src/*"]
+    }
+  }
 }

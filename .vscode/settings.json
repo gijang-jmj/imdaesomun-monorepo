@@ -4,8 +4,6 @@
       "mode": "auto"
     }
   ],
-  "cSpell.words": [
-    "imdaesomun"
-  ],
+  "cSpell.words": ["imdaesomun"],
   "typescript.tsdk": "node_modules/typescript/lib"
 }
