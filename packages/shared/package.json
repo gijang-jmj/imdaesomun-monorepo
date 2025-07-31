@@ -1,5 +1,8 @@
 {
   "name": "@imdaesomun/shared",
   "version": "1.0.0",
-  "private": true
+  "private": true,
+  "scripts": {
+    "format": "prettier --write ."
+  }
 }

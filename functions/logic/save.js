@@ -38,7 +38,7 @@ async function saveNoticeLogic({ noticeId, userId }) {
       corporation,
       createdAt: FieldValue.serverTimestamp(),
     },
-    { merge: true },
+    { merge: true }
   );
 }
 

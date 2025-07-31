@@ -122,7 +122,7 @@ async function sendFcmToAllLogic({ title, body, data }) {
           }
         }
       });
-    }),
+    })
   );
 
   // 실패한 토큰들 일괄 삭제

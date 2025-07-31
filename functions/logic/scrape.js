@@ -696,7 +696,7 @@ const scrapeIhNoticeDetail = async (seq) => {
       .next('dd')
       .text()
       .replace(/,/g, ''),
-    10,
+    10
   );
 
   // extract files

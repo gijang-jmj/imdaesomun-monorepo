@@ -51,7 +51,7 @@ const onRequestWithCors = (handler) => {
       cors(req, res, () => {
         handler(req, res);
       });
-    },
+    }
   );
 };
 
@@ -85,7 +85,7 @@ exports.scrapeNotices = onRequestWithCors(async (req, res) => {
         } catch (fcmError) {
           logger.error(
             `[FCM] Failed to send notification for SH notice ${notice.id}:`,
-            fcmError,
+            fcmError
           );
         }
       }
@@ -104,7 +104,7 @@ exports.scrapeNotices = onRequestWithCors(async (req, res) => {
         } catch (fcmError) {
           logger.error(
             `[FCM] Failed to send notification for GH notice ${notice.id}:`,
-            fcmError,
+            fcmError
           );
         }
       }
