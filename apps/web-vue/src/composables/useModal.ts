@@ -1,44 +1,44 @@
-import { shallowRef, watch } from 'vue'
-import type { Component } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
+import { shallowRef, watch } from 'vue';
+import type { Component } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 
-const isOpen = shallowRef(false)
-const modalComponent = shallowRef<Component | null>(null)
+const isOpen = shallowRef(false);
+const modalComponent = shallowRef<Component | null>(null);
 
 export const useModal = () => {
-  const router = useRouter()
-  const route = useRoute()
+  const router = useRouter();
+  const route = useRoute();
 
   watch(
     () => route.query.modal,
     (modalQuery) => {
       if (!modalQuery && isOpen.value) {
-        setClose()
+        setClose();
       }
-    },
-  )
+    }
+  );
 
   const setClose = () => {
-    isOpen.value = false
-    modalComponent.value = null
-    document.body.classList.remove('no-scroll')
-  }
+    isOpen.value = false;
+    modalComponent.value = null;
+    document.body.classList.remove('no-scroll');
+  };
 
   const open = (component: Component) => {
-    isOpen.value = true
-    modalComponent.value = component
-    document.body.classList.add('no-scroll')
-    router.push({ query: { ...route.query, modal: 'open' } })
-  }
+    isOpen.value = true;
+    modalComponent.value = component;
+    document.body.classList.add('no-scroll');
+    router.push({ query: { ...route.query, modal: 'open' } });
+  };
 
   const close = () => {
-    router.back()
-  }
+    router.back();
+  };
 
   return {
     isOpen,
     modalComponent,
     open,
     close,
-  }
-}
+  };
+};

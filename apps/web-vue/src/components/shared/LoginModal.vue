@@ -9,7 +9,7 @@
       <GoogleButton @click="userStore.login" />
       <button
         @click="close"
-        class="w-full cursor-pointer rounded-lg bg-gray-500-10 px-4 py-2 text-body text-gray-500 transition-colors hover:bg-gray-300"
+        class="bg-gray-500-10 text-body w-full cursor-pointer rounded-lg px-4 py-2 text-gray-500 transition-colors hover:bg-gray-300"
       >
         닫기
       </button>
@@ -18,23 +18,23 @@
 </template>
 
 <script setup lang="ts">
-import { useModal } from '@/composables/useModal'
-import { useUserStore } from '@/stores/user-store'
-import GoogleButton from './GoogleButton.vue'
-import IconHomeFill from '../icons/IconHomeFill.vue'
-import InfoCard from './InfoCard.vue'
-import { watch } from 'vue'
+import { useModal } from '@/composables/useModal';
+import { useUserStore } from '@/stores/user-store';
+import GoogleButton from './GoogleButton.vue';
+import IconHomeFill from '../icons/IconHomeFill.vue';
+import InfoCard from './InfoCard.vue';
+import { watch } from 'vue';
 
-const { close } = useModal()
-const userStore = useUserStore()
+const { close } = useModal();
+const userStore = useUserStore();
 
 watch(
   () => userStore.isLoggedIn,
   (isLoggedIn) => {
     if (isLoggedIn) {
-      close()
+      close();
     }
   },
-  { immediate: true },
-)
+  { immediate: true }
+);
 </script>

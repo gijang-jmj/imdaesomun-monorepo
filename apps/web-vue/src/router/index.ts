@@ -1,5 +1,5 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import { AppRoute } from '@imdaesomun/shared/constants/app-route'
+import { createRouter, createWebHistory } from 'vue-router';
+import { AppRoute } from '@imdaesomun/shared/constants/app-route';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -36,11 +36,11 @@ const router = createRouter({
   ],
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
-      return savedPosition
+      return savedPosition;
     } else {
-      return { top: 0 }
+      return { top: 0 };
     }
   },
-})
+});
 
-export default router
+export default router;

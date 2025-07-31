@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { useNotice } from '@/composables/useNotice'
-import { onMounted, watch } from 'vue'
-import { useRoute } from 'vue-router'
-import NoticeDetail from './components/NoticeDetail.vue'
-import ErrorCard from '@/components/shared/ErrorCard.vue'
-import NoticeDetailSkeleton from './components/NoticeDetailSkeleton.vue'
-import { useUserStore } from '@/stores/user-store'
+import { useNotice } from '@/composables/useNotice';
+import { onMounted, watch } from 'vue';
+import { useRoute } from 'vue-router';
+import NoticeDetail from './components/NoticeDetail.vue';
+import ErrorCard from '@/components/shared/ErrorCard.vue';
+import NoticeDetailSkeleton from './components/NoticeDetailSkeleton.vue';
+import { useUserStore } from '@/stores/user-store';
 
-const route = useRoute()
+const route = useRoute();
 const {
   notice,
   isSaved,
@@ -17,34 +17,34 @@ const {
   checkIfNoticeSaved,
   handleSaveNotice,
   handleDeleteNotice,
-} = useNotice()
-const userStore = useUserStore()
+} = useNotice();
+const userStore = useUserStore();
 
 const handleSaveClick = (id: string, isSaved: boolean) => {
   if (isSaved) {
-    handleDeleteNotice(id)
+    handleDeleteNotice(id);
   } else {
-    handleSaveNotice(id)
+    handleSaveNotice(id);
   }
-}
+};
 
 onMounted(() => {
-  const id = route.query.id
+  const id = route.query.id;
   if (typeof id === 'string') {
-    fetchNoticeById(id)
+    fetchNoticeById(id);
   }
-})
+});
 
 watch(
   () => userStore.isLoggedIn,
   () => {
-    const id = route.query.id
+    const id = route.query.id;
     if (typeof id === 'string') {
-      checkIfNoticeSaved(id)
+      checkIfNoticeSaved(id);
     }
   },
-  { immediate: true },
-)
+  { immediate: true }
+);
 </script>
 
 <template>
@@ -59,7 +59,11 @@ watch(
       />
     </template>
     <template v-else-if="notice">
-      <NoticeDetail :notice="notice" :is-saved="isSaved" @save-clicked="handleSaveClick" />
+      <NoticeDetail
+        :notice="notice"
+        :is-saved="isSaved"
+        @save-clicked="handleSaveClick"
+      />
     </template>
     <template v-else>
       <ErrorCard

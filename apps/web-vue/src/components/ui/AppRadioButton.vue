@@ -1,26 +1,26 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed } from 'vue';
 
 const props = defineProps<{
-  label: string
-  value: string | null
-  modelValue: string | null
-  count: number
-}>()
+  label: string;
+  value: string | null;
+  modelValue: string | null;
+  count: number;
+}>();
 
-const emit = defineEmits(['update:modelValue'])
+const emit = defineEmits(['update:modelValue']);
 
-const isSelected = computed(() => props.modelValue === props.value)
+const isSelected = computed(() => props.modelValue === props.value);
 
 const handleClick = () => {
-  emit('update:modelValue', props.value)
-}
+  emit('update:modelValue', props.value);
+};
 </script>
 
 <template>
   <button
     @click="handleClick"
-    class="shrink-0 cursor-pointer rounded-full px-3 py-1 text-label-bold"
+    class="text-label-bold shrink-0 cursor-pointer rounded-full px-3 py-1"
     :class="[
       isSelected
         ? 'bg-teal-500-10 text-teal-500'

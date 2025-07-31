@@ -3,5 +3,5 @@
 </template>
 
 <script setup lang="ts">
-import BmcPng from '@imdaesomun/assets/icons/bmc.png'
+import BmcPng from '@imdaesomun/assets/icons/bmc.png';
 </script>

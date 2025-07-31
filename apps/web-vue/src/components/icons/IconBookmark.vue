@@ -3,5 +3,5 @@
 </template>
 
 <script setup lang="ts">
-import BookmarkSvg from '@imdaesomun/assets/icons/bookmark.svg'
+import BookmarkSvg from '@imdaesomun/assets/icons/bookmark.svg';
 </script>

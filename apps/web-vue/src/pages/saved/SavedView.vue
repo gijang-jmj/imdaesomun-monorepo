@@ -1,55 +1,55 @@
 <script setup lang="ts">
-import ErrorCard from '@/components/shared/ErrorCard.vue'
-import InfoCard from '@/components/shared/InfoCard.vue'
-import { useSavedStore } from '@/stores/saved-store'
-import { storeToRefs } from 'pinia'
-import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
-import SavedCard from './components/SavedCard.vue'
-import SavedFilter from './components/SavedFilter.vue'
-import SavedCardSkeleton from './components/SavedCardSkeleton.vue'
-import { useUserStore } from '@/stores/user-store'
-import IconHomeFill from '@/components/icons/IconHomeFill.vue'
-import GoogleButton from '@/components/shared/GoogleButton.vue'
+import ErrorCard from '@/components/shared/ErrorCard.vue';
+import InfoCard from '@/components/shared/InfoCard.vue';
+import { useSavedStore } from '@/stores/saved-store';
+import { storeToRefs } from 'pinia';
+import { onBeforeUnmount, onMounted, ref, watch } from 'vue';
+import SavedCard from './components/SavedCard.vue';
+import SavedFilter from './components/SavedFilter.vue';
+import SavedCardSkeleton from './components/SavedCardSkeleton.vue';
+import { useUserStore } from '@/stores/user-store';
+import IconHomeFill from '@/components/icons/IconHomeFill.vue';
+import GoogleButton from '@/components/shared/GoogleButton.vue';
 
-const savedStore = useSavedStore()
-const userStore = useUserStore()
-const { savedNotices, isLoading, error, hasMore } = storeToRefs(savedStore)
+const savedStore = useSavedStore();
+const userStore = useUserStore();
+const { savedNotices, isLoading, error, hasMore } = storeToRefs(savedStore);
 
-const bottomContainer = ref<HTMLElement | null>(null)
-let observer: IntersectionObserver | null = null
+const bottomContainer = ref<HTMLElement | null>(null);
+let observer: IntersectionObserver | null = null;
 
 watch(
   () => userStore.isLoggedIn,
   () => {
     if (userStore.isLoggedIn) {
-      savedStore.fetchSavedNotices()
+      savedStore.fetchSavedNotices();
     } else {
-      savedStore.resetState()
+      savedStore.resetState();
     }
-  },
-)
+  }
+);
 
 onMounted(() => {
   observer = new IntersectionObserver(
     ([entry]) => {
       if (entry.isIntersecting) {
-        savedStore.fetchSavedNotices()
+        savedStore.fetchSavedNotices();
       }
     },
     {
       threshold: 0,
-    },
-  )
+    }
+  );
   if (bottomContainer.value) {
-    observer.observe(bottomContainer.value)
+    observer.observe(bottomContainer.value);
   }
-})
+});
 
 onBeforeUnmount(() => {
   if (observer && bottomContainer.value) {
-    observer.unobserve(bottomContainer.value)
+    observer.unobserve(bottomContainer.value);
   }
-})
+});
 </script>
 
 <template>
@@ -76,11 +76,13 @@ onBeforeUnmount(() => {
     <SavedFilter />
     <template v-if="savedNotices.length <= 0 && !isLoading">
       <div class="m-4 flex flex-1 items-center justify-center">
-        <IconHomeFill class="h-20 flex-shrink-0 text-gray-500-10 md:h-30" />
+        <IconHomeFill class="text-gray-500-10 h-20 flex-shrink-0 md:h-30" />
       </div>
     </template>
     <template v-else>
-      <div class="mb-24 grid grid-cols-1 gap-x-4 gap-y-2 px-4 py-2 md:grid-cols-2">
+      <div
+        class="mb-24 grid grid-cols-1 gap-x-4 gap-y-2 px-4 py-2 md:grid-cols-2"
+      >
         <template v-if="error">
           <ErrorCard
             :content="'저장된 공고를 불러오는 중 오류가 발생했어요\n잠시 후 다시 시도해주세요'"
@@ -106,10 +108,13 @@ onBeforeUnmount(() => {
       </div>
     </template>
     <div ref="bottomContainer" />
-    <div v-if="savedNotices.length > 0 && hasMore && !isLoading" class="flex justify-center p-4">
+    <div
+      v-if="savedNotices.length > 0 && hasMore && !isLoading"
+      class="flex justify-center p-4"
+    >
       <button
         @click="savedStore.fetchSavedNotices"
-        class="cursor-pointer rounded-full bg-teal-500-10 px-4 py-2 text-label-bold text-teal-500 transition-colors hover:bg-teal-200"
+        class="bg-teal-500-10 text-label-bold cursor-pointer rounded-full px-4 py-2 text-teal-500 transition-colors hover:bg-teal-200"
       >
         더보기
       </button>

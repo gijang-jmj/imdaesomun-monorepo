@@ -1,57 +1,57 @@
 <script setup lang="ts">
-import IconGh from '@/components/icons/IconGh.vue'
-import IconSh from '@/components/icons/IconSh.vue'
-import NoticeBanner from './components/NoticeBanner.vue'
-import NoticeCard from './components/NoticeCard.vue'
-import IconIh from '@/components/icons/IconIh.vue'
-import IconBmc from '@/components/icons/IconBmc.vue'
-import { onMounted } from 'vue'
-import { storeToRefs } from 'pinia'
+import IconGh from '@/components/icons/IconGh.vue';
+import IconSh from '@/components/icons/IconSh.vue';
+import NoticeBanner from './components/NoticeBanner.vue';
+import NoticeCard from './components/NoticeCard.vue';
+import IconIh from '@/components/icons/IconIh.vue';
+import IconBmc from '@/components/icons/IconBmc.vue';
+import { onMounted } from 'vue';
+import { storeToRefs } from 'pinia';
 import {
   useBmcNoticeListStore,
   useGhNoticeListStore,
   useIhNoticeListStore,
   useShNoticeListStore,
-} from '@/stores/notice-store'
-import NoticeCardSkeleton from './components/NoticeCardSkeleton.vue'
-import InfoCard from '@/components/shared/InfoCard.vue'
-import ErrorCard from '@/components/shared/ErrorCard.vue'
-import { NoticeCorporationTypeKor } from '@imdaesomun/shared/constants/notice'
+} from '@/stores/notice-store';
+import NoticeCardSkeleton from './components/NoticeCardSkeleton.vue';
+import InfoCard from '@/components/shared/InfoCard.vue';
+import ErrorCard from '@/components/shared/ErrorCard.vue';
+import { NoticeCorporationTypeKor } from '@imdaesomun/shared/constants/notice';
 
-const shNoticeListStore = useShNoticeListStore()
+const shNoticeListStore = useShNoticeListStore();
 const {
   notices: shNotices,
   isLoading: shIsLoading,
   error: shError,
-} = storeToRefs(shNoticeListStore)
+} = storeToRefs(shNoticeListStore);
 
-const ghNoticeListStore = useGhNoticeListStore()
+const ghNoticeListStore = useGhNoticeListStore();
 const {
   notices: ghNotices,
   isLoading: ghIsLoading,
   error: ghError,
-} = storeToRefs(ghNoticeListStore)
+} = storeToRefs(ghNoticeListStore);
 
-const ihNoticeListStore = useIhNoticeListStore()
+const ihNoticeListStore = useIhNoticeListStore();
 const {
   notices: ihNotices,
   isLoading: ihIsLoading,
   error: ihError,
-} = storeToRefs(ihNoticeListStore)
+} = storeToRefs(ihNoticeListStore);
 
-const bmcNoticeListStore = useBmcNoticeListStore()
+const bmcNoticeListStore = useBmcNoticeListStore();
 const {
   notices: bmcNotices,
   isLoading: bmcIsLoading,
   error: bmcError,
-} = storeToRefs(bmcNoticeListStore)
+} = storeToRefs(bmcNoticeListStore);
 
 onMounted(() => {
-  shNoticeListStore.fetchNotices()
-  ghNoticeListStore.fetchNotices()
-  ihNoticeListStore.fetchNotices()
-  bmcNoticeListStore.fetchNotices()
-})
+  shNoticeListStore.fetchNotices();
+  ghNoticeListStore.fetchNotices();
+  ihNoticeListStore.fetchNotices();
+  bmcNoticeListStore.fetchNotices();
+});
 </script>
 
 <template>

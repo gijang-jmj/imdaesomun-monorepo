@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { useSavedStore } from '@/stores/saved-store'
-import { storeToRefs } from 'pinia'
-import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
-import AppRadioButton from '@/components/ui/AppRadioButton.vue'
+import { useSavedStore } from '@/stores/saved-store';
+import { storeToRefs } from 'pinia';
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue';
+import AppRadioButton from '@/components/ui/AppRadioButton.vue';
 
-const savedStore = useSavedStore()
-const { currentFilter, shCount, ghCount, ihCount, bmcCount } = storeToRefs(savedStore)
+const savedStore = useSavedStore();
+const { currentFilter, shCount, ghCount, ihCount, bmcCount } =
+  storeToRefs(savedStore);
 
 const filters = computed(() => [
   { label: '전체', value: null, count: savedStore.totalCount },
@@ -13,44 +14,46 @@ const filters = computed(() => [
   { label: 'GH', value: 'gh', count: ghCount.value },
   { label: 'IH', value: 'ih', count: ihCount.value },
   { label: 'BMC', value: 'bmc', count: bmcCount.value },
-])
+]);
 
 const setFilter = (filter: string | null) => {
-  savedStore.setFilter(filter)
-}
+  savedStore.setFilter(filter);
+};
 
-const isStuck = ref(false)
-const filterContainer = ref<HTMLElement | null>(null)
-let observer: IntersectionObserver | null = null
+const isStuck = ref(false);
+const filterContainer = ref<HTMLElement | null>(null);
+let observer: IntersectionObserver | null = null;
 
 onMounted(() => {
   observer = new IntersectionObserver(
     ([entry]) => {
       if (entry.isIntersecting) {
-        isStuck.value = false
+        isStuck.value = false;
       } else {
-        isStuck.value = true
+        isStuck.value = true;
       }
     },
     {
       rootMargin: '-1px 0px 0px 0px',
       threshold: 1,
-    },
-  )
+    }
+  );
   if (filterContainer.value) {
-    observer.observe(filterContainer.value)
+    observer.observe(filterContainer.value);
   }
-})
+});
 
 onBeforeUnmount(() => {
   if (observer && filterContainer.value) {
-    observer.unobserve(filterContainer.value)
+    observer.unobserve(filterContainer.value);
   }
-})
+});
 
 const stickyClass = computed(() => {
-  return isStuck.value ? 'bg-white shadow-sm md:shadow-none md:bg-transparent' : 'bg-transparent'
-})
+  return isStuck.value
+    ? 'bg-white shadow-sm md:shadow-none md:bg-transparent'
+    : 'bg-transparent';
+});
 </script>
 
 <template>
