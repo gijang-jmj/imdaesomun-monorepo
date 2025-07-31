@@ -27,4 +27,4 @@ export const AppRoute = {
    * description : 저장된 공고 페이지
    */
   SAVED: '/saved',
-} as const
+} as const;
