@@ -1,3 +1,5 @@
+import { AppLink } from '@imdaesomun/shared/constants/app-link';
+
 export default function AppFooter() {
   return (
     <footer className="border-t border-gray-100 bg-white">
@@ -8,7 +10,7 @@ export default function AppFooter() {
           </div>
           <div className="flex gap-x-6">
             <a
-              href="https://github.com/gijang-jmj/imdaesomun/blob/main/docment/privacy_policy.md"
+              href={AppLink.PRIVACY_POLICY}
               target="_blank"
               rel="noopener noreferrer"
               className="text-label-bold text-gray-500 transition-colors hover:text-teal-500"
@@ -16,7 +18,7 @@ export default function AppFooter() {
               개인정보 처리방침
             </a>
             <a
-              href="https://github.com/gijang-jmj/imdaesomun/blob/main/docment/account_deletion_notice.md"
+              href={AppLink.ACCOUNT_NOTICE}
               target="_blank"
               rel="noopener noreferrer"
               className="text-label-bold text-gray-500 transition-colors hover:text-teal-500"

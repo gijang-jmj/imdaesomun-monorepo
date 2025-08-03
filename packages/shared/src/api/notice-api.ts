@@ -1,5 +1,5 @@
 import type { AxiosInstance } from 'axios';
-import type { Notice, NoticePagination } from '@imdaesomun/shared/types/notice';
+import { Notice, NoticePagination } from '../types/notice';
 
 export const createGetShNoticeList =
   (axiosInstance: AxiosInstance) => async (): Promise<Notice[]> => {

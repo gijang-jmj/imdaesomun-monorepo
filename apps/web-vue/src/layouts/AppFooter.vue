@@ -41,6 +41,8 @@
   </footer>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { AppLink } from '@imdaesomun/shared/constants/app-link';
+</script>
 
 <style scoped></style>
