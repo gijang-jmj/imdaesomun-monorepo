@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      axios:
+        specifier: ^1.11.0
+        version: 1.11.0
       date-fns:
         specifier: ^4.1.0
         version: 4.1.0
@@ -24,6 +27,12 @@ importers:
 
   apps/web-next:
     dependencies:
+      '@imdaesomun/assets':
+        specifier: workspace:*
+        version: link:../../packages/assets
+      '@imdaesomun/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
       next:
         specifier: 15.4.5
         version: 15.4.5(@opentelemetry/api@1.9.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -37,6 +46,9 @@ importers:
       '@eslint/eslintrc':
         specifier: ^3
         version: 3.3.1
+      '@imdaesomun/configs':
+        specifier: workspace:*
+        version: link:../../packages/configs
       '@tailwindcss/postcss':
         specifier: ^4
         version: 4.1.11
@@ -70,9 +82,6 @@ importers:
       '@imdaesomun/shared':
         specifier: workspace:*
         version: link:../../packages/shared
-      axios:
-        specifier: ^1.10.0
-        version: 1.11.0
       firebase:
         specifier: ^11.10.0
         version: 11.10.0
@@ -155,9 +164,6 @@ importers:
 
   functions:
     dependencies:
-      axios:
-        specifier: ^1.9.0
-        version: 1.11.0
       cheerio:
         specifier: ^1.0.0
         version: 1.1.2
