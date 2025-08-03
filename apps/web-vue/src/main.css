@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 @import '../node_modules/@imdaesomun/assets/src/styles/tailwind.base.css';
-@source "../node_modules/@imdaesomun";
+@source '../node_modules/@imdaesomun/src';
 
 #app {
   @apply bg-gray-50 text-gray-900;

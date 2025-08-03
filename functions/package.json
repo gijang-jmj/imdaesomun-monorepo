@@ -23,7 +23,6 @@
     "firebase-functions": "^6.0.1"
   },
   "devDependencies": {
-    "@imdaesomun/configs": "workspace:*",
     "eslint": "^8.15.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^10.1.3",

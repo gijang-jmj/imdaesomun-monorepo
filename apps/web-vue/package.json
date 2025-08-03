@@ -13,8 +13,8 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "@imdaesomun/assets": "workspace:*",
-    "@imdaesomun/shared": "workspace:*",
+    "@imdaesomun/assets": "workspace:^",
+    "@imdaesomun/shared": "workspace:^",
     "firebase": "^11.10.0",
     "lottie-web": "^5.13.0",
     "pinia": "^3.0.3",
@@ -23,7 +23,6 @@
     "vue3-lottie": "^3.3.1"
   },
   "devDependencies": {
-    "@imdaesomun/configs": "workspace:*",
     "@tailwindcss/vite": "^4.1.11",
     "@tsconfig/node22": "^22.0.2",
     "@types/node": "^22.15.32",

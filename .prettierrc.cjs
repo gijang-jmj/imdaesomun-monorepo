@@ -1,1 +1,1 @@
-module.exports = require('./packages/configs/prettier.config.base.cjs');
+module.exports = require('@imdaesomun/configs/prettier.config.base.cjs');
