@@ -1,22 +1,22 @@
 import axiosInstance from '@/services/axios';
 import {
-  getShNoticeList as getShNoticeListShared,
-  getGhNoticeList as getGhNoticeListShared,
-  getIhNotice as getIhNoticeShared,
-  getBmcNoticeList as getBmcNoticeListShared,
-  getNoticeById as getNoticeByIdShared,
-  saveNotice as saveNoticeShared,
-  deleteNotice as deleteNoticeShared,
-  getNoticeSaved as getNoticeSavedShared,
-  getSavedNotices as getSavedNoticesShared,
+  createGetShNoticeList,
+  createGetGhNoticeList,
+  createGetIhNotice,
+  createGetBmcNoticeList,
+  createGetNoticeById,
+  createSaveNotice,
+  createDeleteNotice,
+  createGetNoticeSaved,
+  createGetSavedNotices,
 } from '@imdaesomun/shared/api/notice-api';
 
-export const getShNoticeList = getShNoticeListShared(axiosInstance);
-export const getGhNoticeList = getGhNoticeListShared(axiosInstance);
-export const getIhNotice = getIhNoticeShared(axiosInstance);
-export const getBmcNoticeList = getBmcNoticeListShared(axiosInstance);
-export const getNoticeById = getNoticeByIdShared(axiosInstance);
-export const saveNotice = saveNoticeShared(axiosInstance);
-export const deleteNotice = deleteNoticeShared(axiosInstance);
-export const getNoticeSaved = getNoticeSavedShared(axiosInstance);
-export const getSavedNotices = getSavedNoticesShared(axiosInstance);
+export const getShNoticeList = createGetShNoticeList(axiosInstance);
+export const getGhNoticeList = createGetGhNoticeList(axiosInstance);
+export const getIhNotice = createGetIhNotice(axiosInstance);
+export const getBmcNoticeList = createGetBmcNoticeList(axiosInstance);
+export const getNoticeById = createGetNoticeById(axiosInstance);
+export const saveNotice = createSaveNotice(axiosInstance);
+export const deleteNotice = createDeleteNotice(axiosInstance);
+export const getNoticeSaved = createGetNoticeSaved(axiosInstance);
+export const getSavedNotices = createGetSavedNotices(axiosInstance);
