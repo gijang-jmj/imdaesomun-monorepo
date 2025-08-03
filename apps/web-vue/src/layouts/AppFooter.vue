@@ -7,14 +7,14 @@
         </div>
         <div class="flex gap-x-6">
           <a
-            href="https://github.com/gijang-jmj/imdaesomun/blob/main/docment/privacy_policy.md"
+            :href="AppLink.PRIVACY_POLICY"
             target="_blank"
             rel="noopener noreferrer"
             class="text-label-bold text-gray-500 transition-colors hover:text-teal-500"
             >개인정보 처리방침</a
           >
           <a
-            href="https://github.com/gijang-jmj/imdaesomun/blob/main/docment/account_deletion_notice.md"
+            :href="AppLink.ACCOUNT_NOTICE"
             target="_blank"
             rel="noopener noreferrer"
             class="text-label-bold text-gray-500 transition-colors hover:text-teal-500"
@@ -41,6 +41,8 @@
   </footer>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { AppLink } from '@imdaesomun/shared/constants/app-link';
+</script>
 
 <style scoped></style>

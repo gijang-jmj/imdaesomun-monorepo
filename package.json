@@ -10,6 +10,7 @@
     "dev-all": "turbo run dev --parallel",
     "dev-vue": "turbo run dev --filter=web-vue",
     "dev-next": "turbo run dev --filter=web-next",
+    "dev-web": "turbo run dev --filter='web-*'",
     "dev-functions": "turbo run dev --filter=functions"
   },
   "devDependencies": {

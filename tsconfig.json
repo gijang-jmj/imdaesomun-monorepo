@@ -1,5 +1,5 @@
 {
-  "exclude": ["node_modules", "dist"],
+  "exclude": ["apps", "functions"],
   "compilerOptions": {
     // basic
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
@@ -12,6 +12,8 @@
     "paths": {
       // vue
       "@/*": ["apps/web-vue/src/*"],
+      // next
+      "~/*": ["apps/web-next/src/*"],
       // packages
       "@imdaesomun/assets/*": ["packages/assets/src/*"],
       "@imdaesomun/configs/*": ["packages/configs/*"],

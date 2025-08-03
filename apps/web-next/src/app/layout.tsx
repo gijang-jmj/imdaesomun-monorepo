@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import AppHeader from '@/layouts/AppHeader';
-import AppNav from '@/layouts/AppNav';
-import AppFooter from '@/layouts/AppFooter';
-import AppModalLayout from '@/layouts/AppModalLayout';
-import AppLoading from '@/layouts/AppLoading';
+import AppHeader from '~/layouts/AppHeader';
+import AppNav from '~/layouts/AppNav';
+import AppFooter from '~/layouts/AppFooter';
+import AppModalLayout from '~/layouts/AppModalLayout';
+import AppLoading from '~/layouts/AppLoading';
 
 export const metadata: Metadata = {
   title: '임대소문 - 공공임대 정보 한눈에 보기',
