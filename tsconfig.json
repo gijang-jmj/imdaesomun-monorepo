@@ -8,16 +8,10 @@
     "forceConsistentCasingInFileNames": true,
 
     // alias
-    "baseUrl": ".",
     "paths": {
-      // vue
-      "@/*": ["apps/web-vue/src/*"],
-      // next
-      "~/*": ["apps/web-next/src/*"],
-      // packages
-      "@imdaesomun/assets/*": ["packages/assets/src/*"],
-      "@imdaesomun/configs/*": ["packages/configs/*"],
-      "@imdaesomun/shared/*": ["packages/shared/src/*"]
+      "@imdaesomun/assets/*": ["./packages/assets/src/*"],
+      "@imdaesomun/configs/*": ["./packages/configs/*"],
+      "@imdaesomun/shared/*": ["./packages/shared/src/*"]
     }
   }
 }

@@ -1,27 +1,15 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
   "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
-    // vue 3 tsconfig overwrite
-    "noEmit": true,
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "resolveJsonModule": true,
-    "allowImportingTsExtensions": true,
-    "moduleDetection": "force",
-    "jsx": "preserve",
-    "jsxImportSource": "vue",
-    "noImplicitThis": true,
-    "strict": true,
-    "verbatimModuleSyntax": true,
-    "target": "ESNext",
-    "useDefineForClassFields": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
 
-    // etc
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo"
+    "paths": {
+      "@/*": ["./src/*"],
+      "@imdaesomun/assets/*": ["../../packages/assets/src/*"],
+      "@imdaesomun/configs/*": ["../../packages/configs/*"],
+      "@imdaesomun/shared/*": ["../../packages/shared/src/*"]
+    }
   }
 }

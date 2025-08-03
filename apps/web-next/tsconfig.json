@@ -1,7 +1,4 @@
 {
-  "extends": "../../tsconfig.json",
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"],
   "compilerOptions": {
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -20,6 +17,13 @@
       {
         "name": "next"
       }
-    ]
-  }
+    ],
+    "paths": {
+      "@/*": ["./src/*"],
+      "@imdaesomun/assets/*": ["../../packages/assets/src/*"],
+      "@imdaesomun/configs/*": ["../../packages/configs/*"],
+      "@imdaesomun/shared/*": ["../../packages/shared/src/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"]
 }
