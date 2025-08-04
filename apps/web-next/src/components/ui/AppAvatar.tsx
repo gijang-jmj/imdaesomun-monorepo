@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
-import IconProfile from '../icons/IconProfile';
+import { IconProfile } from '../icons/IconProfile';
 
 type AppAvatarProps = {
   photoURL?: string | null;
@@ -10,11 +10,7 @@ type AppAvatarProps = {
   className?: string | null;
 };
 
-const AppAvatar: React.FC<AppAvatarProps> = ({
-  photoURL,
-  isLogin,
-  className,
-}) => {
+export const AppAvatar = ({ photoURL, isLogin, className }: AppAvatarProps) => {
   const [hasError, setHasError] = useState(false);
 
   const onImageError = () => {
@@ -27,21 +23,13 @@ const AppAvatar: React.FC<AppAvatarProps> = ({
 
   return (
     <div
-      className={`flex items-center justify-center overflow-hidden rounded-full ${containerClass} ${className}`}
+      className={`relative flex items-center justify-center overflow-hidden rounded-full ${containerClass} ${className}`}
     >
       {photoURL && !hasError ? (
-        <Image
-          src={photoURL}
-          alt="User Avatar"
-          onError={onImageError}
-          width={24}
-          height={24}
-        />
+        <Image fill src={photoURL} alt="User Avatar" onError={onImageError} />
       ) : (
         <IconProfile className={`w-4/5 ${avatarClass}`} />
       )}
     </div>
   );
 };
-
-export default AppAvatar;

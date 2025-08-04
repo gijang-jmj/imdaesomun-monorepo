@@ -1,10 +1,8 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import AppHeader from '@/layouts/AppHeader';
-import AppNav from '@/layouts/AppNav';
-import AppFooter from '@/layouts/AppFooter';
-import AppModalLayout from '@/layouts/AppModalLayout';
-import AppLoading from '@/layouts/AppLoading';
+import { AppHeader } from '@/components/layouts/AppHeader';
+import { AppNav } from '@/components/layouts/AppNav';
+import { AppFooter } from '@/components/layouts/AppFooter';
 
 export const metadata: Metadata = {
   title: '임대소문 - 공공임대 정보 한눈에 보기',
@@ -20,8 +18,6 @@ export default function RootLayout({
     <html lang="kr">
       <body className="antialiased">
         <div className="flex min-h-screen flex-col">
-          <AppModalLayout />
-          <AppLoading />
           <AppHeader />
           <main className="flex flex-1 flex-col">
             <div className="mx-auto flex w-full max-w-5xl flex-1 flex-col">

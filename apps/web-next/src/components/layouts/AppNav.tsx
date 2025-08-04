@@ -1,13 +1,13 @@
 'use client';
 
-import IconBookmarkCheck from '@/components/icons/IconBookmarkCheck';
-import IconHome from '@/components/icons/IconHome';
-import IconProfile from '@/components/icons/IconProfile';
+import { IconBookmarkCheck } from '@/components/icons/IconBookmarkCheck';
+import { IconHome } from '@/components/icons/IconHome';
+import { IconProfile } from '@/components/icons/IconProfile';
 import { AppRoute } from '@imdaesomun/shared/constants/app-route';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-export default function AppNav() {
+export const AppNav = () => {
   const pathname = usePathname();
 
   const user = {
@@ -52,4 +52,4 @@ export default function AppNav() {
       </div>
     </nav>
   );
-}
+};

@@ -1,24 +1,24 @@
-import React from 'react';
+'use client';
 
 type AppRadioButtonProps = {
   label: string;
   value: string | null;
   modelValue: string | null;
   count: number;
-  onChange: (value: string | null) => void;
+  onChangeAction: (value: string | null) => void;
 };
 
-const AppRadioButton: React.FC<AppRadioButtonProps> = ({
+export const AppRadioButton = ({
   label,
   value,
   modelValue,
   count,
-  onChange,
-}) => {
+  onChangeAction,
+}: AppRadioButtonProps) => {
   const isSelected = modelValue === value;
 
   const handleClick = () => {
-    onChange(value);
+    onChangeAction(value);
   };
 
   return (
@@ -31,5 +31,3 @@ const AppRadioButton: React.FC<AppRadioButtonProps> = ({
     </div>
   );
 };
-
-export default AppRadioButton;

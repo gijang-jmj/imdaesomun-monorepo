@@ -1,6 +1,6 @@
 import { AppLink } from '@imdaesomun/shared/constants/app-link';
 
-export default function AppFooter() {
+export const AppFooter = () => {
   return (
     <footer className="border-t border-gray-100 bg-white">
       <div className="mx-auto max-w-5xl px-4 py-12 text-center md:text-start">
@@ -46,4 +46,4 @@ export default function AppFooter() {
       </div>
     </footer>
   );
-}
+};

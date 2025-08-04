@@ -2,25 +2,24 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import IconHomeFill from '@/components/icons/IconHomeFill';
-import AppAvatar from '@/components/ui/AppAvatar';
+import { IconHomeFill } from '@/components/icons/IconHomeFill';
 import { AppRoute } from '@imdaesomun/shared/constants/app-route';
+import useUserStore from '@/stores/user-store';
+import { AppAvatar } from '../ui/AppAvatar';
 
-export default function AppHeader() {
+export function AppHeader() {
   const pathname = usePathname();
 
-  const user = {
-    isLoggedIn: false, // Replace with actual user state
-    photoURL: '', // Replace with actual user photo URL
-  };
+  const user = useUserStore((state) => state.user);
+  const isLoggedIn = useUserStore((state) => state.isLoggedIn());
+  const login = useUserStore((state) => state.login);
+  const logout = useUserStore((state) => state.logout);
 
   const onAvatarClick = () => {
-    if (user.isLoggedIn) {
-      // Open Profile Modal
-      console.log('Open Profile Modal');
+    if (isLoggedIn) {
+      logout();
     } else {
-      // Open Login Modal
-      console.log('Open Login Modal');
+      login();
     }
   };
 
@@ -58,8 +57,8 @@ export default function AppHeader() {
         <div className="cursor-pointer px-3 py-1" onClick={onAvatarClick}>
           <AppAvatar
             className="h-7 w-7"
-            photoURL={user.photoURL}
-            isLogin={user.isLoggedIn}
+            photoURL={user?.photoURL}
+            isLogin={isLoggedIn}
           />
         </div>
       </div>

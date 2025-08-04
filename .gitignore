@@ -40,7 +40,6 @@ yarn-error.log*
 *.pem
 
 # Firebase log
-firebase.ts
 firebase-debug.log*
 firebase-debug.*.log*
 
