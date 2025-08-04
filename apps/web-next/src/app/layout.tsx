@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="kr">
-      <body className="antialiased">
+      <body>
         <div className="flex min-h-screen flex-col">
           <AppHeader />
           <main className="flex flex-1 flex-col">

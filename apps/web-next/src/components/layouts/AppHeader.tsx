@@ -24,7 +24,7 @@ export function AppHeader() {
   };
 
   return (
-    <header className="sticky top-0 z-10 border-b bg-white">
+    <header className="border-b border-gray-100 bg-white">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-2 md:py-4">
         <div className="flex items-end gap-10">
           <Link href={AppRoute.HOME} className="flex items-center gap-2">

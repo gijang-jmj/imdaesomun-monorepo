@@ -34,7 +34,7 @@ export const AppFooter = () => {
             목적에 따라 제공하며, 모든 공고의 저작권은 해당 공사에 귀속됩니다.
           </p>
           <p className="text-label text-gray-400">
-            문의 :
+            문의:&nbsp;
             <a
               href="mailto:wnalsals1127@gmail.com"
               className="transition-colors hover:text-teal-500"
