@@ -22,7 +22,7 @@ interface UseUserStore {
   withdraw: () => Promise<void>;
 }
 
-const useUserStore = create<UseUserStore>((set) => {
+export const useUserStore = create<UseUserStore>((set, get) => {
   const updateUser = (user: User | null) => set({ user });
 
   // 앱 시작 시 로그인 유지 확인
@@ -32,11 +32,11 @@ const useUserStore = create<UseUserStore>((set) => {
 
   return {
     user: auth.currentUser,
-    isLoggedIn: () => !!auth.currentUser,
-    uid: () => auth.currentUser?.uid ?? null,
-    displayName: () => auth.currentUser?.displayName ?? null,
-    email: () => auth.currentUser?.email ?? null,
-    photoURL: () => auth.currentUser?.photoURL ?? null,
+    isLoggedIn: () => !!get().user,
+    uid: () => get().user?.uid ?? null,
+    displayName: () => get().user?.displayName ?? null,
+    email: () => get().user?.email ?? null,
+    photoURL: () => get().user?.photoURL ?? null,
 
     login: async () => {
       const isInAppBrowser = checkInAppBrowser();
@@ -65,5 +65,3 @@ const useUserStore = create<UseUserStore>((set) => {
     },
   };
 });
-
-export default useUserStore;

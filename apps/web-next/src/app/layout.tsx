@@ -3,6 +3,7 @@ import './globals.css';
 import { AppHeader } from '@/components/layouts/AppHeader';
 import { AppNav } from '@/components/layouts/AppNav';
 import { AppFooter } from '@/components/layouts/AppFooter';
+import { AppLoading } from '@/components/layouts/AppLoading';
 
 export const metadata: Metadata = {
   title: '임대소문 - 공공임대 정보 한눈에 보기',
@@ -18,6 +19,7 @@ export default function RootLayout({
     <html lang="kr">
       <body>
         <div className="flex min-h-screen flex-col">
+          <AppLoading />
           <AppHeader />
           <main className="flex flex-1 flex-col">
             <div className="mx-auto flex w-full max-w-5xl flex-1 flex-col">

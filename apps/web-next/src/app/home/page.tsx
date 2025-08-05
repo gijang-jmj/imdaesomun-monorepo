@@ -50,7 +50,11 @@ export default async function Home() {
               <Icon className="w-7 md:w-8" />
             </NoticeBanner>
             {result.status === 'rejected' ? (
-              <ErrorCard content="공고를 불러오는 중 오류가 발생했어요\n잠시 후 다시 시도해주세요" />
+              <ErrorCard
+                content={
+                  '공고를 불러오는 중 오류가 발생했어요\n잠시 후 다시 시도해주세요'
+                }
+              />
             ) : (
               result.value.map((notice: Notice) => (
                 <NoticeCard

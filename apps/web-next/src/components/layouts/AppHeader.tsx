@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { IconHomeFill } from '@/components/icons/IconHomeFill';
 import { AppRoute } from '@imdaesomun/shared/constants/app-route';
-import useUserStore from '@/stores/user-store';
+import { useUserStore } from '@/stores/user.store';
 import { AppAvatar } from '../ui/AppAvatar';
 
 export function AppHeader() {
