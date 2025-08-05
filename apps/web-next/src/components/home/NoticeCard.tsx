@@ -9,13 +9,13 @@ import {
 import { isNewNotice } from '@imdaesomun/shared/helpers/notice-helper';
 import { AppRoute } from '@imdaesomun/shared/constants/app-route';
 
-type NoticeCardProps = {
+interface NoticeCardProps {
   id: string;
   title: string;
   date: number; // Timestamp in milliseconds
   views: number; // Number of views
   department: string;
-};
+}
 
 export const NoticeCard = ({
   id,
@@ -26,7 +26,7 @@ export const NoticeCard = ({
 }: NoticeCardProps) => {
   return (
     <Link
-      href={{ pathname: AppRoute.NOTICE, query: { id } }}
+      href={{ pathname: `${AppRoute.NOTICE}/${id}` }}
       className="hover:bg-teal-500-10 flex cursor-pointer flex-col items-start gap-2 rounded-xl bg-white p-4 shadow-sm transition-colors"
     >
       {isNewNotice(date) && (

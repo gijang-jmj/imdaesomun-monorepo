@@ -4,11 +4,11 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { IconProfile } from '../icons/IconProfile';
 
-type AppAvatarProps = {
+interface AppAvatarProps {
   photoURL?: string | null;
   isLogin: boolean;
   className?: string | null;
-};
+}
 
 export const AppAvatar = ({ photoURL, isLogin, className }: AppAvatarProps) => {
   const [hasError, setHasError] = useState(false);

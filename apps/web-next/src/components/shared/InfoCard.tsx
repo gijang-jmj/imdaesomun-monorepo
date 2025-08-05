@@ -1,8 +1,8 @@
 import { IconInfo } from '@/components/icons/IconInfo';
 
-type InfoCardProps = {
+interface InfoCardProps {
   content: string;
-};
+}
 
 export const InfoCard = ({ content }: InfoCardProps) => {
   return (

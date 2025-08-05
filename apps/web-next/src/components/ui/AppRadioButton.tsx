@@ -1,12 +1,12 @@
 'use client';
 
-type AppRadioButtonProps = {
+interface AppRadioButtonProps {
   label: string;
   value: string | null;
   modelValue: string | null;
   count: number;
   onChangeAction: (value: string | null) => void;
-};
+}
 
 export const AppRadioButton = ({
   label,

@@ -1,7 +1,7 @@
-type NoticeBannerProps = {
+interface NoticeBannerProps {
   title: string;
   children?: React.ReactNode;
-};
+}
 
 export const NoticeBanner = ({ title, children }: NoticeBannerProps) => {
   return (
