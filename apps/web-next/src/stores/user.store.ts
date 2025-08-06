@@ -10,35 +10,30 @@ import {
 } from 'firebase/auth';
 import { checkInAppBrowser } from '@imdaesomun/shared/utils/link-util';
 
-interface UseUserStore {
+interface UserState {
   user: User | null;
-  isLoggedIn: () => boolean;
-  uid: () => string | null;
-  displayName: () => string | null;
-  email: () => string | null;
-  photoURL: () => string | null;
-  login: () => Promise<void>;
-  logout: () => Promise<void>;
+  isLoggedIn: boolean;
+}
+
+interface UserActions {
+  login: (successCallback?: () => void) => Promise<void>;
+  logout: (successCallback?: () => void) => Promise<void>;
   withdraw: () => Promise<void>;
 }
 
-export const useUserStore = create<UseUserStore>((set, get) => {
-  const updateUser = (user: User | null) => set({ user });
+interface UseUserStore extends UserState, UserActions {}
 
+export const useUserStore = create<UseUserStore>((set) => {
   // 앱 시작 시 로그인 유지 확인
   onAuthStateChanged(auth, (user) => {
-    updateUser(user);
+    set({ user, isLoggedIn: !!user });
   });
 
   return {
     user: auth.currentUser,
-    isLoggedIn: () => !!get().user,
-    uid: () => get().user?.uid ?? null,
-    displayName: () => get().user?.displayName ?? null,
-    email: () => get().user?.email ?? null,
-    photoURL: () => get().user?.photoURL ?? null,
+    isLoggedIn: !!auth.currentUser,
 
-    login: async () => {
+    login: async (successCallback?: () => void) => {
       const isInAppBrowser = checkInAppBrowser();
 
       if (isInAppBrowser) {
@@ -48,20 +43,38 @@ export const useUserStore = create<UseUserStore>((set, get) => {
         return;
       }
 
-      const provider = new GoogleAuthProvider();
-      const result = await signInWithPopup(auth, provider);
-      updateUser(result.user);
+      try {
+        const provider = new GoogleAuthProvider();
+        const result = await signInWithPopup(auth, provider);
+        set({ user: result.user, isLoggedIn: !!result.user });
+
+        if (successCallback && result.user) {
+          setTimeout(successCallback, 100);
+        }
+      } catch (error) {
+        console.error('Login failed:', error);
+      }
     },
 
-    logout: async () => {
+    logout: async (successCallback?: () => void) => {
       await signOut(auth);
-      updateUser(null);
+      set({ user: null, isLoggedIn: false });
+
+      if (successCallback) {
+        setTimeout(successCallback, 100);
+      }
     },
 
     withdraw: async () => {
-      if (!auth.currentUser) return;
-      await deleteUser(auth.currentUser);
-      updateUser(null);
+      const user = auth.currentUser;
+      if (!user) return;
+
+      try {
+        await deleteUser(user);
+        set({ user: null, isLoggedIn: false });
+      } catch (error) {
+        console.error('Withdraw failed:', error);
+      }
     },
   };
 });

@@ -15,14 +15,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  modal,
 }: {
   children: React.ReactNode;
+  modal: React.ReactNode;
 }) {
   return (
     <html lang="kr">
       <body>
         <div className="flex min-h-screen flex-col">
-          <AppLoading />
           <AppHeader />
           <main className="flex flex-1 flex-col">
             <div className="mx-auto flex w-full max-w-5xl flex-1 flex-col">
@@ -31,6 +32,8 @@ export default function RootLayout({
           </main>
           <AppNav />
           <AppFooter />
+          {modal}
+          <AppLoading />
         </div>
       </body>
     </html>

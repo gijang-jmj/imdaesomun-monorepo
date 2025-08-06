@@ -28,3 +28,5 @@ export const AppRoute = {
    */
   SAVED: '/saved',
 } as const;
+
+export type AppRouteValueType = (typeof AppRoute)[keyof typeof AppRoute];

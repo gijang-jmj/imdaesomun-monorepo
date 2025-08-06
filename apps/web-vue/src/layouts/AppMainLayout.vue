@@ -1,7 +1,5 @@
 <template>
   <div class="flex min-h-screen flex-col">
-    <AppModalLayout />
-    <AppLoading />
     <AppHeader />
     <div class="flex flex-1 flex-col">
       <div class="mx-auto flex w-full max-w-5xl flex-1 flex-col">
@@ -10,6 +8,8 @@
     </div>
     <AppNav />
     <AppFooter />
+    <AppModalLayout />
+    <AppLoading />
   </div>
 </template>
 

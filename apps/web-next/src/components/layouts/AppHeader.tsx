@@ -1,25 +1,25 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { IconHomeFill } from '@/components/icons/IconHomeFill';
 import { AppRoute } from '@imdaesomun/shared/constants/app-route';
 import { useUserStore } from '@/stores/user.store';
 import { AppAvatar } from '../ui/AppAvatar';
+import { Modal } from '@/lib/constants/modal';
 
-export function AppHeader() {
+export const AppHeader = () => {
   const pathname = usePathname();
+  const router = useRouter();
 
   const user = useUserStore((state) => state.user);
-  const isLoggedIn = useUserStore((state) => state.isLoggedIn());
-  const login = useUserStore((state) => state.login);
-  const logout = useUserStore((state) => state.logout);
+  const isLoggedIn = useUserStore((state) => state.isLoggedIn);
 
   const onAvatarClick = () => {
     if (isLoggedIn) {
-      logout();
+      router.push(Modal.PROFILE, { scroll: false });
     } else {
-      login();
+      router.push(Modal.LOGIN, { scroll: false });
     }
   };
 
@@ -64,4 +64,4 @@ export function AppHeader() {
       </div>
     </header>
   );
-}
+};
