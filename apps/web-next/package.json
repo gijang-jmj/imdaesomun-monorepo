@@ -11,6 +11,7 @@
   "dependencies": {
     "@imdaesomun/assets": "workspace:^",
     "@imdaesomun/shared": "workspace:^",
+    "@tanstack/react-query": "^5.84.1",
     "firebase": "^11.10.0",
     "lottie-react": "^2.4.1",
     "next": "15.4.5",

@@ -14,7 +14,7 @@ import { getNoticeCorporationTypeKor } from '@imdaesomun/shared/helpers/notice-h
 import NoticeSaveButton from './NoticeSaveButton';
 import { Notice } from '@imdaesomun/shared/types/notice';
 import { postToUrl } from '@imdaesomun/shared/utils/link-util';
-import { useNoticeSaved } from '@/hooks/useNotice';
+import { useNoticeSaved } from '@/hooks/useNoticeSaved';
 
 interface NoticeDetailProps {
   id: string;
