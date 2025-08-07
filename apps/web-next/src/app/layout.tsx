@@ -4,7 +4,7 @@ import { AppHeader } from '@/components/layouts/AppHeader';
 import { AppNav } from '@/components/layouts/AppNav';
 import { AppFooter } from '@/components/layouts/AppFooter';
 import { AppLoading } from '@/components/layouts/AppLoading';
-import { baseOpenGraph } from '@/lib/constants/seo';
+import { baseOpenGraph } from '@/constants/seo';
 
 export const metadata: Metadata = {
   title: '임대소문 - 공공임대 정보 한눈에 보기',

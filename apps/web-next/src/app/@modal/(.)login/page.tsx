@@ -7,7 +7,7 @@ import { IconHomeFill } from '@/components/icons/IconHomeFill';
 import { GoogleButton } from '@/components/shared/GoogleButton';
 import { AppModalLayout } from '@/components/layouts/AppModalLayout';
 import { useEffect } from 'react';
-import { Modal } from '@/lib/constants/modal';
+import { Modal } from '@/constants/modal';
 
 export default function LoginModal() {
   const router = useRouter();

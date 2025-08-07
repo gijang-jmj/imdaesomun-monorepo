@@ -1,7 +1,7 @@
 import { NoticeDetail } from '@/components/notice/NoticeDetail';
 import { ErrorCard } from '@/components/shared/ErrorCard';
-import { getNoticeById } from '@/lib/api/server/notice.api';
-import { baseOpenGraph } from '@/lib/constants/seo';
+import { getNoticeById } from '@/api/server/notice.api';
+import { baseOpenGraph } from '@/constants/seo';
 import { getNoticeCorporationTypeKor } from '@imdaesomun/shared/helpers/notice-helper';
 import { AxiosError } from 'axios';
 import { Metadata } from 'next';

@@ -10,7 +10,7 @@ import {
   getGhNoticeList,
   getIhNotice,
   getShNoticeList,
-} from '@/lib/api/server/notice.api';
+} from '@/api/server/notice.api';
 import { IconGh } from '@/components/icons/IconGh';
 import { IconIh } from '@/components/icons/IconIh';
 import { IconBmc } from '@/components/icons/IconBmc';

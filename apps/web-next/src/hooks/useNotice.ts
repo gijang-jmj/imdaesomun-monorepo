@@ -3,11 +3,11 @@ import {
   deleteNotice,
   getNoticeSaved,
   saveNotice,
-} from '@/lib/api/client/notice.api';
+} from '@/api/client/notice.api';
 import { useUserStore } from '@/stores/user.store';
 import { useLoadingStore } from '@/stores/loading.store';
 import { useRouter } from 'next/navigation';
-import { Modal } from '@/lib/constants/modal';
+import { Modal } from '@/constants/modal';
 
 interface UseNoticeSavedReturn {
   isSaved: boolean;

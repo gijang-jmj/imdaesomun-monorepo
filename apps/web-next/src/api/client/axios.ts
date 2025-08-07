@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { getToken } from 'firebase/app-check';
-import { appCheckInstance } from '@/lib/firebase/firebase';
+import { appCheckInstance } from '../../../firebase';
 
 const axiosInstance = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_BASE_URL,

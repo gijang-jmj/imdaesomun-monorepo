@@ -3,7 +3,7 @@
 import { AppModalLayout } from '@/components/layouts/AppModalLayout';
 import { InfoCard } from '@/components/shared/InfoCard';
 import { AppAvatar } from '@/components/ui/AppAvatar';
-import { Modal } from '@/lib/constants/modal';
+import { Modal } from '@/constants/modal';
 import { useUserStore } from '@/stores/user.store';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';

@@ -6,7 +6,7 @@ import { IconHomeFill } from '@/components/icons/IconHomeFill';
 import { AppRoute } from '@imdaesomun/shared/constants/app-route';
 import { useUserStore } from '@/stores/user.store';
 import { AppAvatar } from '../ui/AppAvatar';
-import { Modal } from '@/lib/constants/modal';
+import { Modal } from '@/constants/modal';
 
 export const AppHeader = () => {
   const pathname = usePathname();

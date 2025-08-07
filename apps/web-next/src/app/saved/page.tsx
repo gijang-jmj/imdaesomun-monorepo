@@ -1,5 +1,5 @@
 import { SavedView } from '@/components/saved/SavedView';
-import { baseOpenGraph } from '@/lib/constants/seo';
+import { baseOpenGraph } from '@/constants/seo';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
