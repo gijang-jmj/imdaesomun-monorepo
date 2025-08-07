@@ -48,7 +48,7 @@ export const useUserStore = create<UseUserStore>((set) => {
         const result = await signInWithPopup(auth, provider);
         set({ user: result.user, isLoggedIn: !!result.user });
 
-        if (successCallback && result.user) {
+        if (typeof successCallback === 'function' && result.user) {
           setTimeout(successCallback, 100);
         }
       } catch (error) {
@@ -60,7 +60,7 @@ export const useUserStore = create<UseUserStore>((set) => {
       await signOut(auth);
       set({ user: null, isLoggedIn: false });
 
-      if (successCallback) {
+      if (typeof successCallback === 'function') {
         setTimeout(successCallback, 100);
       }
     },

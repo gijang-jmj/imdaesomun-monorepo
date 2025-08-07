@@ -3,6 +3,7 @@ import { ErrorCard } from '@/components/shared/ErrorCard';
 import { getNoticeById } from '@/lib/api/server/notice.api';
 import { baseOpenGraph } from '@/lib/constants/seo';
 import { getNoticeCorporationTypeKor } from '@imdaesomun/shared/helpers/notice-helper';
+import { AxiosError } from 'axios';
 import { Metadata } from 'next';
 
 export async function generateMetadata({
@@ -48,6 +49,15 @@ export default async function Notice({
     return <NoticeDetail id={noticeId} notice={notice} />;
   } catch (error) {
     console.error('Failed to fetch notice:', error);
+
+    if (error instanceof AxiosError && error?.response?.status === 404) {
+      return (
+        <ErrorCard
+          className="mx-4 my-2"
+          content={'요청하신 공고가 존재하지 않아요'}
+        />
+      );
+    }
 
     return (
       <ErrorCard

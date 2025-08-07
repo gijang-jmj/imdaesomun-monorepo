@@ -1,15 +1,11 @@
 'use client';
 
-import { IconHomeFill } from '@/components/icons/IconHomeFill';
-import { GoogleButton } from '@/components/shared/GoogleButton';
-import { InfoCard } from '@/components/shared/InfoCard';
 import { useUserStore } from '@/stores/user.store';
-import { AppRoute } from '@imdaesomun/shared/constants/app-route';
-import { useRouter } from 'next/navigation';
+import { IconHomeFill } from '../icons/IconHomeFill';
+import { GoogleButton } from '../shared/GoogleButton';
+import { InfoCard } from '../shared/InfoCard';
 
-export default function Login() {
-  const router = useRouter();
-
+export const SavedLogin = () => {
   const login = useUserStore((state) => state.login);
 
   return (
@@ -24,16 +20,10 @@ export default function Login() {
             <span className="text-title-bold text-teal-500">임대소문</span>
           </div>
           <div className="mt-4 flex w-full flex-col gap-2">
-            <GoogleButton
-              onClick={() =>
-                login(() => {
-                  router.replace(AppRoute.SAVED);
-                })
-              }
-            />
+            <GoogleButton onClick={login} />
           </div>
         </div>
       </div>
     </>
   );
-}
+};
