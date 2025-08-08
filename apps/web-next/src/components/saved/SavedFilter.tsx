@@ -62,6 +62,7 @@ export const SavedFilter = ({
 
   const handleFilterChange = (value: string | null) => {
     setSavedFilter(value);
+    window.scrollTo(0, 0);
   };
 
   const stickyClass = isStuck

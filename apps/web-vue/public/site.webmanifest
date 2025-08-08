@@ -1,6 +1,6 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "임대소문 - 공공임대 정보 한눈에 보기",
+  "short_name": "임대소문",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
