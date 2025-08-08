@@ -3,25 +3,23 @@
 import { IconBookmarkCheck } from '@/components/icons/IconBookmarkCheck';
 import { IconHome } from '@/components/icons/IconHome';
 import { IconProfile } from '@/components/icons/IconProfile';
+import { Modal } from '@/constants/modal';
+import { useUserStore } from '@/stores/user.store';
 import { AppRoute } from '@imdaesomun/shared/constants/app-route';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 export const AppNav = () => {
   const pathname = usePathname();
+  const router = useRouter();
 
-  const user = {
-    isLoggedIn: false, // Replace with actual user state
-    photoURL: '', // Replace with actual user photo URL
-  };
+  const isLoggedIn = useUserStore((state) => state.isLoggedIn);
 
   const onAvatarClick = () => {
-    if (user.isLoggedIn) {
-      // Open Profile Modal
-      console.log('Open Profile Modal');
+    if (isLoggedIn) {
+      router.push(Modal.PROFILE, { scroll: false });
     } else {
-      // Open Login Modal
-      console.log('Open Login Modal');
+      router.push(Modal.LOGIN, { scroll: false });
     }
   };
 

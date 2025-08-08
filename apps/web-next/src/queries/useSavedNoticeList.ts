@@ -1,11 +1,11 @@
 import { getSavedNotices } from '@/api/client/notice.api';
-import { useFilterStore } from '@/stores/filter.store';
+import { useSavedFilterStore } from '@/stores/filter.store';
 import { useUserStore } from '@/stores/user.store';
 import { useInfiniteQuery } from '@tanstack/react-query';
 
 export const useSavedNoticeList = () => {
   const user = useUserStore((state) => state.user);
-  const filter = useFilterStore((state) => state.filter);
+  const filter = useSavedFilterStore((state) => state.savedFilter);
 
   const {
     data,

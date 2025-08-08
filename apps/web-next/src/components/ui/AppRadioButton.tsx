@@ -3,7 +3,7 @@
 interface AppRadioButtonProps {
   label: string;
   value: string | null;
-  modelValue: string | null;
+  groupValue: string | null;
   count: number;
   onChangeAction: (value: string | null) => void;
 }
@@ -11,23 +11,22 @@ interface AppRadioButtonProps {
 export const AppRadioButton = ({
   label,
   value,
-  modelValue,
+  groupValue,
   count,
   onChangeAction,
 }: AppRadioButtonProps) => {
-  const isSelected = modelValue === value;
+  const isSelected = groupValue === value;
 
   const handleClick = () => {
     onChangeAction(value);
   };
 
   return (
-    <div
-      className={`radio-button ${isSelected ? 'selected' : ''}`}
+    <button
       onClick={handleClick}
+      className={`text-label-bold shrink-0 cursor-pointer rounded-full px-3 py-1 ${isSelected ? 'bg-teal-500-10 text-teal-500' : 'bg-gray-500-10 text-gray-500 hover:bg-gray-300'}`}
     >
-      <span>{label}</span>
-      <span>{count}</span>
-    </div>
+      {label} {count}
+    </button>
   );
 };

@@ -1,11 +1,11 @@
 import { create } from 'zustand';
 
 interface FilterStore {
-  filter: string | null;
-  setFilter: (filter: string | null) => void;
+  savedFilter: string | null;
+  setSavedFilter: (filter: string | null) => void;
 }
 
-export const useFilterStore = create<FilterStore>((set) => ({
-  filter: null,
-  setFilter: (newFilter) => set({ filter: newFilter }),
+export const useSavedFilterStore = create<FilterStore>((set) => ({
+  savedFilter: null,
+  setSavedFilter: (newFilter) => set({ savedFilter: newFilter }),
 }));

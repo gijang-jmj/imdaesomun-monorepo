@@ -1,5 +1,6 @@
 import { SavedView } from '@/components/saved/SavedView';
 import { baseOpenGraph } from '@/constants/seo';
+import { ReactQueryProvider } from '@/queries/ReactQueryProvider';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -10,5 +11,9 @@ export const metadata: Metadata = {
 };
 
 export default function Saved() {
-  return <SavedView />;
+  return (
+    <ReactQueryProvider>
+      <SavedView />
+    </ReactQueryProvider>
+  );
 }
