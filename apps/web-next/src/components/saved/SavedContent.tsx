@@ -8,6 +8,7 @@ interface SavedContentProps {
   savedNotices: Notice[];
   isError: boolean;
   isLoading: boolean;
+  hasNextPage: boolean;
   fetchNextPage: () => void;
 }
 
@@ -15,6 +16,7 @@ export const SavedContent = ({
   savedNotices,
   isError,
   isLoading,
+  hasNextPage,
   fetchNextPage,
 }: SavedContentProps) => {
   const bottomContainerRef = useRef<HTMLDivElement | null>(null);
@@ -70,7 +72,19 @@ export const SavedContent = ({
             ))
           : null}
       </div>
+      {/* 인피니티 스크롤 타겟 엘리먼트 */}
       <div ref={bottomContainerRef} />
+      {/* 큰 해상도 대응을 위한 더보기 버튼 */}
+      {hasNextPage && !isLoading ? (
+        <div className="flex justify-center p-4">
+          <button
+            onClick={fetchNextPage}
+            className="bg-teal-500-10 text-label-bold cursor-pointer rounded-full px-4 py-2 text-teal-500 transition-colors hover:bg-teal-200"
+          >
+            더보기
+          </button>
+        </div>
+      ) : null}
     </>
   );
 };

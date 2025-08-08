@@ -19,6 +19,7 @@ export const SavedView = () => {
     bmcCount,
     isLoading,
     isError,
+    hasNextPage,
     fetchNextPage,
   } = useSavedNoticeList();
 
@@ -47,6 +48,7 @@ export const SavedView = () => {
           savedNotices={savedNotices}
           isError={isError}
           isLoading={isLoading}
+          hasNextPage={hasNextPage}
           fetchNextPage={fetchNextPage}
         />
       )}
