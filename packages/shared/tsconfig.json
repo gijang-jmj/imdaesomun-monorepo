@@ -15,7 +15,8 @@
     "declarationMap": true,
     "outDir": "dist",
     "composite": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "verbatimModuleSyntax": true
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"]
