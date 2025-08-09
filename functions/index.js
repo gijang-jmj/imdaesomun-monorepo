@@ -38,7 +38,7 @@ const {
 initializeApp();
 
 const cors = corsLib({
-  origin: ['https://imdaesomun.web.app'],
+  origin: ['https://imdaesomun.web.app', 'https://imdaesomun.vercel.app'],
   methods: ['GET', 'POST'],
   credentials: true,
 });
