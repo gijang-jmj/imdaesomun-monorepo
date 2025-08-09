@@ -49,7 +49,7 @@ export const NoticeDetail = ({ id, notice }: NoticeDetailProps) => {
   };
 
   return (
-    <div className="mx-4 mt-2 mb-24 rounded-xl bg-white p-4 shadow-sm transition-colors md:p-6">
+    <div className="mx-4 mt-2 mb-56 rounded-xl bg-white p-4 shadow-sm transition-colors md:p-6">
       <div className="mb-4 flex flex-col gap-2 border-b border-gray-100 pb-4">
         <div className="flex flex-col">
           <span className="text-body-bold text-teal-500">

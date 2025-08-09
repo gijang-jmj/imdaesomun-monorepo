@@ -3,9 +3,21 @@
 import Lottie from 'lottie-react';
 import animationData from '@imdaesomun/assets/lottie/loading.json';
 import { useLoadingStore } from '@/stores/loading.store';
+import { useEffect } from 'react';
 
 export const AppLoading = () => {
   const isLoading = useLoadingStore((state) => state.isLoading);
+
+  useEffect(() => {
+    if (isLoading) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+    return () => {
+      document.body.classList.remove('no-scroll');
+    };
+  }, [isLoading]);
 
   if (!isLoading) {
     return null;
