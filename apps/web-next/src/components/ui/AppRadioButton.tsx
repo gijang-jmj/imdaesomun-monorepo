@@ -18,6 +18,7 @@ export const AppRadioButton = ({
   const isSelected = groupValue === value;
 
   const handleClick = () => {
+    if (isSelected) return;
     onChangeAction(value);
   };
 

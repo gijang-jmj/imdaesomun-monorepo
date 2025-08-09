@@ -33,6 +33,8 @@ export const useSavedNoticeList = () => {
     },
     enabled: !!user?.uid,
     initialPageParam: 0,
+    staleTime: 0,
+    gcTime: 0,
   });
 
   const savedNotices = data?.pages.flatMap((page) => page.notices) || [];
