@@ -37,9 +37,7 @@ export const AppHeader = () => {
             <Link
               href={AppRoute.HOME}
               className={`text-subtitle rounded-lg px-3 py-1 transition-colors hover:text-teal-500 ${
-                pathname === '/' || pathname === AppRoute.HOME
-                  ? 'text-teal-500'
-                  : 'text-gray-400'
+                pathname === AppRoute.HOME ? 'text-teal-500' : 'text-gray-400'
               }`}
             >
               홈

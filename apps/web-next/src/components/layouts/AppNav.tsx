@@ -28,7 +28,7 @@ export const AppNav = () => {
       <div className="flex items-center justify-around border-t border-gray-100 bg-white">
         <Link
           href="/"
-          className={`flex flex-1 flex-col items-center justify-center gap-0.5 py-2 text-gray-400 transition-colors hover:text-teal-500 ${pathname === '/' || pathname === AppRoute.HOME ? 'text-teal-500' : 'text-gray-400'}`}
+          className={`flex flex-1 flex-col items-center justify-center gap-0.5 py-2 text-gray-400 transition-colors hover:text-teal-500 ${pathname === AppRoute.HOME ? 'text-teal-500' : 'text-gray-400'}`}
         >
           <IconHome className="h-5" />
           <span className="text-caption-bold">임대소문</span>
