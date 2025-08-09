@@ -1,5 +1,10 @@
 import { isToday } from 'date-fns';
 import { NoticeCorporationTypeKor } from '../constants/notice';
+import type { Notice } from '../types/notice';
+
+export const sortNotices = (results: Notice[]): Notice[] => {
+  return results.sort((a, b) => b.no - a.no);
+};
 
 export const isNewNotice = (timestamp: number): boolean => {
   return isToday(new Date(timestamp));

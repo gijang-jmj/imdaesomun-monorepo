@@ -8,7 +8,7 @@ import { IconSh } from '@/components/icons/IconSh';
 import {
   getBmcNoticeList,
   getGhNoticeList,
-  getIhNotice,
+  getIhNoticeList,
   getShNoticeList,
 } from '@/api/server/notice.api';
 import { IconGh } from '@/components/icons/IconGh';
@@ -19,7 +19,7 @@ export default async function Home() {
   const results = await Promise.allSettled([
     getShNoticeList(),
     getGhNoticeList(),
-    getIhNotice(),
+    getIhNoticeList(),
     getBmcNoticeList(),
   ]);
 

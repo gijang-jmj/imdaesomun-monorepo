@@ -1,3 +1,8 @@
+/**
+ * POST 요청을 위한 폼 생성 및 전송
+ * @param url 요청 URL
+ * @param params 전송할 파라미터
+ */
 export const postToUrl = (url: string, params: Record<string, string>) => {
   const form = document.createElement('form');
   form.method = 'POST';
@@ -20,6 +25,10 @@ export const postToUrl = (url: string, params: Record<string, string>) => {
   document.body.removeChild(form); // cleanup
 };
 
+/**
+ * 인앱 브라우저 체크
+ * @returns 인앱 브라우저 여부
+ */
 export const checkInAppBrowser = (): boolean => {
   const ua = navigator.userAgent.toLowerCase();
 
@@ -30,15 +39,4 @@ export const checkInAppBrowser = (): boolean => {
     ua.includes('line') ||
     (ua.includes('naver') && ua.includes('inapp'))
   );
-};
-
-export const openInExternalBrowser = (): void => {
-  const a = document.createElement('a');
-  a.href = 'https://imdaesomun.web.app';
-  a.target = '_blank';
-  a.rel = 'noopener noreferrer';
-
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
 };

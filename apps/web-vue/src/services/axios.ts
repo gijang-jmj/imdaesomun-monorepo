@@ -24,4 +24,4 @@ axiosInstance.interceptors.request.use(async (config) => {
   return config;
 });
 
-export default axiosInstance;
+export { axiosInstance };

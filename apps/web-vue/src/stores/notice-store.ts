@@ -3,7 +3,7 @@ import { defineStore } from 'pinia';
 import {
   getBmcNoticeList,
   getGhNoticeList,
-  getIhNotice,
+  getIhNoticeList,
   getShNoticeList,
 } from '@/api/notice-api';
 import type { Notice } from '@imdaesomun/shared/types/notice';
@@ -50,7 +50,7 @@ export const useGhNoticeListStore = createNoticeStore(
 );
 export const useIhNoticeListStore = createNoticeStore(
   'ihNoticeList',
-  getIhNotice
+  getIhNoticeList
 );
 export const useBmcNoticeListStore = createNoticeStore(
   'bmcNoticeList',
