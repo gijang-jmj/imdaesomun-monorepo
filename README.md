@@ -20,7 +20,7 @@
 apps/
 	web-next/   # Next.js 15 (App Router) + React 19
 	web-vue/    # Vue 3 (Composition) + Vite
-functions/    # Firebase Functions v2 (HTTPS API + Scraper + FCM)
+functions/      # Firebase Functions v2 (HTTPS API + Scraper + FCM)
 packages/
 	assets/     # 공유 아이콘/스타일/애니메이션(lottie)
 	shared/     # 타입/유틸/상수 등 공유 코드
