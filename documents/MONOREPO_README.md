@@ -19,7 +19,14 @@
 - 서버리스 API(Firebase Functions + Firestore)
 - 주기적 공고 크롤링(Cloud Scheduler)
 
+## 🌐 웹 레퍼지토리
+
+- https://github.com/gijang-jmj/imdaesomun-monorepo/tree/main/apps/web-next - Next
+- https://github.com/gijang-jmj/imdaesomun-monorepo/tree/main/apps/web-vue - Vue
+
 ## 🔧 기술 스택 요약
+
+Next, Vue 상세 기술 스택 웹 레퍼지토리 `README.md` 참조.
 
 | 영역              | 기술                                              | 비고                           |
 | ----------------- | ------------------------------------------------- | ------------------------------ |
@@ -34,6 +41,8 @@
 | 빌드/워크스페이스 | Turborepo 2.x, pnpm                               | 멀티 패키지 태스크 캐싱        |
 
 ## 🧱 모노레포 구성
+
+Next, Vue 상세 디렉토리 구성 웹 레퍼지토리 `README.md` 참조.
 
 ```bash
 imdaesomun-monorepo
