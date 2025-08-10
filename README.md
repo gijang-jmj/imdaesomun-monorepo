@@ -4,6 +4,12 @@
 
 이 저장소는 Turborepo 기반 모노레포로 Next.js 15(Apps)와 Vue 3(Apps), Firebase Functions(Backend), 공유 패키지(Packages)로 구성됩니다.
 
+## 🚀 프로덕션 URL
+
+- **https://imdaesomun.vercel.app/** - Next 웹
+- **https://imdaesomun.web.app/** - Vue 웹
+- **https://github.com/gijang-jmj/imdaesomun** - Flutter 앱(GitHub)
+
 ## 📌 핵심 기능
 
 - 기관별 공고 모아보기: SH(서울), GH(경기), IH(인천), BMC(부산)
@@ -68,11 +74,9 @@ imdaesomun-monorepo
 | @imdaesomun/assets  | SVG/PNG/Lottie/CSS 베이스 스타일      |
 | @imdaesomun/configs | tsconfig / prettier 구성 공유         |
 
-## 📡 API 개요 (Firebase Functions, HTTPS)
+## 📡 API 개요 (Firebase Functions)
 
-- https://github.com/gijang-jmj/imdaesomun/blob/main/docment/api_spec.md 문서 참고.
-
-- 보안: CORS 허용 도메인 제한(`imdaesomun.web.app`), API Key 헤더 검증, App Check 이용.
+- https://github.com/gijang-jmj/imdaesomun-monorepo/blob/main/documents/API_SPEC.md
 
 ## ⚙️ Turborepo 개발 환경
 
@@ -108,6 +112,6 @@ pnpm build-next # Next.js
 pnpm build-vue  # Vue
 ```
 
-## 📬 문의 & 기여
+## 📬 문의
 
 이슈/개선 제안은 PR 또는 Issues로 남겨주세요.

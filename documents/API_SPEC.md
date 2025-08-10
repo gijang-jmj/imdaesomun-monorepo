@@ -359,11 +359,4 @@ Response 200 예:
 3. 신규 공고 알림: `scrapeNotices` 내부 SH/GH 신규만 실시간 FCM
 4. 전체 긴급 공지: 운영툴에서 `POST /sendFcmToAll`
 
-## 향후 확장 고려
-
-- 페이지네이션: 공고 목록 API limit/offset 파라미터화
-- 검색 기능: 제목/부서 키워드 필터
-- notice 상세 API: contents HTML/raw 저장 분리
-- Webhook: 신규 공고 Third-party 연동
-
 최종 수정: 2025-08-10
