@@ -2,7 +2,7 @@ export const AppRoute = {
   /**
    * page : home
    *
-   * path : /
+   * path : /home
    *
    * description : 임대공고 리스트 페이지
    */

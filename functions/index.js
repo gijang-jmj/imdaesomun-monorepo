@@ -34,6 +34,7 @@ const {
   getNoticeSavedLogic,
   getSavedNoticesLogic,
 } = require('./logic/save');
+const { revalidateHomePage } = require('./logic/revalidate');
 
 initializeApp();
 
@@ -109,6 +110,9 @@ exports.scrapeNotices = onRequestWithCors(async (req, res) => {
         }
       }
     }
+
+    // Revalidate the home page
+    revalidateHomePage();
 
     res.status(200).send({
       message: 'Notices scraped and saved successfully.',

@@ -10,7 +10,7 @@ const defaultInit: RequestInit = {
   headers: {
     'x-imdaesomun-api-key': process.env.X_IMDAESOMUN_API_KEY,
   },
-  next: { revalidate: 300 },
+  next: { revalidate: 1800 }, // 30 minutes
 };
 
 function mergeNext(
