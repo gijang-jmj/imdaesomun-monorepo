@@ -28,17 +28,16 @@
 
 Next, Vue 상세 기술 스택 웹 레퍼지토리 `README.md` 참조.
 
-| 영역              | 기술                                              | 비고                           |
-| ----------------- | ------------------------------------------------- | ------------------------------ |
-| Next 웹           | Next.js 15, React 19                              | App Router / RSC 활용          |
-| Vue 웹            | Vue 3, Vite                                       | Composition API 활용           |
-| 스타일            | Tailwind CSS v4                                   | 공통 base CSS 자산 패키지 제공 |
-| 배포              | Vercel, Firebase Hosting                          | Next.js / Veu 3 배포           |
-| 백엔드            | Firebase Functions v2, Firestore, Cloud Scheduler | 크롤링 & API 노출              |
-| 공통 로직         | @imdaesomun/shared                                | 타입/유틸/API 래퍼             |
-| 정적 자산         | @imdaesomun/assets                                | SVG / Lottie / Base CSS        |
-| 설정 공유         | @imdaesomun/configs                               | tsconfig / prettier            |
-| 빌드/워크스페이스 | Turborepo 2.x, pnpm                               | 멀티 패키지 태스크 캐싱        |
+| 영역              | 기술                                                 | 비고                                 |
+| ----------------- | ---------------------------------------------------- | ------------------------------------ |
+| Next 웹           | Next.js 15 + React 19                                | App Router / RSC 활용                |
+| Vue 웹            | Vue 3, Vite                                          | Composition API 활용                 |
+| 배포              | Vercel, Firebase Hosting                             | Next.js / Veu 3 배포                 |
+| 백엔드            | Firebase Functions v2, Firebase Admin SDK(Firestore) | 크롤링 & API / Cloud Scheduler(크론) |
+| 공통 로직         | @imdaesomun/shared                                   | 타입/유틸/API 래퍼                   |
+| 정적 자산         | @imdaesomun/assets                                   | SVG / Lottie / Tailwind              |
+| 설정 공유         | @imdaesomun/configs                                  | tsconfig / prettier                  |
+| 빌드/워크스페이스 | Turborepo 2.x, pnpm                                  | 멀티 패키지 태스크 캐싱              |
 
 ## 🧱 모노레포 구성
 

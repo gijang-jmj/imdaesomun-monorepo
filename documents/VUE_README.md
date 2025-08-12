@@ -33,8 +33,7 @@
 | 스타일      | Tailwind CSS v4 (프로젝트 공통 스타일 @imdaesomun/assets)              |
 | 애니메이션  | lottie-web + vue3-lottie                                               |
 | 네트워크    | Axios (기본 인스턴스 + 인터셉터)                                       |
-| 인증/플랫폼 | Firebase Auth (Google)                                                 |
-| 보안        | Firebase App Check(reCAPTCHA) + CORS 제한                              |
+| 인증/보안   | Firebase Auth, Firebase App Check(reCAPTCHA)                           |
 | 배포        | Firebase Hosting (단일 SPA 배포)                                       |
 | 번들        | Vite + vite-svg-loader(SVG → 컴포넌트)                                 |
 | 내부 패키지 | @imdaesomun/assets(아이콘/스타일) · @imdaesomun/shared(공통 타입/유틸) |

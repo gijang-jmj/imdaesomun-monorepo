@@ -35,16 +35,15 @@ Legacy(Vue 3) 버전을 Next.js(App Router)으로 재구현한 **SSR 웹 애플�
 
 | 항목        | 내용                                                                   |
 | ----------- | ---------------------------------------------------------------------- |
-| 프레임워크  | Next.js 15 (App Router, RSC)                                           |
+| 프레임워크  | Next.js 15 + React 19                                                  |
 | 언어        | TypeScript                                                             |
 | 데이터 패칭 | fetch(서버) + Axios(클라이언트)                                        |
 | 상태/캐싱   | React Query + Zustand                                                  |
 | 스타일      | Tailwind CSS v4 (프로젝트 공통 스타일 @imdaesomun/assets)              |
 | 애니메이션  | lottie-react                                                           |
-| 인증        | Firebase Auth (Google)                                                 |
-| 보안        | Firebase App Check + CORS 제한                                         |
+| 인증/보안   | Firebase Auth, Firebase App Check                                      |
 | 배포        | Vercel                                                                 |
-| 번들        | SWC(프로덕션) + Turbopack(dev)                                         |
+| 번들        | SWC(prod) + Turbopack(dev)                                             |
 | 내부 패키지 | @imdaesomun/assets(아이콘/스타일) · @imdaesomun/shared(공통 타입/유틸) |
 
 ## 📂 디렉토리 구조
